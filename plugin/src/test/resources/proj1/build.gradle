@@ -1,0 +1,15 @@
+plugins {
+    id 'extension_example.greeting' version 'unspecified'
+}
+
+repositories {
+    mavenLocal()
+}
+
+greeting {
+    message = 'hello2'
+}
+
+//ext {
+//    greeting.message = 'hello4'
+//}
