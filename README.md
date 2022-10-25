@@ -1,6 +1,6 @@
-This is a short and simple code example of a Gradle plugin that defines an extension object a property.
+This is a short and simple code example of a Gradle plugin that defines an extension object with a property.
 
-I wrote this example in order to illustrate a question I have:
+I wrote this to illustrate a question:
 
 **Is there a way to access an extension's properties during the configuration phase?**
 
@@ -19,9 +19,6 @@ The output:
 ```
 > Task :greeting
 hello2 and greetings1
-
-BUILD SUCCESSFUL in 402ms
-1 actionable task: 1 executed
 ```
 
 2nd option:
@@ -35,14 +32,15 @@ The output:
 > Task :greeting
 hello2 and salutations2
 
-BUILD SUCCESSFUL in 386ms
-1 actionable task: 1 executed
-
 ```
 
-### What's happening here?
+Please take a look at the code in these files to understand the output:
+- `GreetingsPlugin.java`
+- `GreetingsPluginExtension.java`
+- `plugin/src/test/resources/proj1/build.gradle`
 
-Please take a moment to look at the code in `GreetingsPlugin.java` and `GreetingsPluginExtension.java`.
+
+### What's happening here?
 
 What I understand is happening is that during the configuration phase, the `greeting { }`
 extension's properties are not yet accessible, so when `extension.getMessage().get()` is called,
