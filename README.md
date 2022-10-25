@@ -7,10 +7,10 @@ I wrote this example in order to illustrate a question I have:
 ### How to run this example
 
 ```shell
-git clone [url to this repo]
-cd extension_example
+git clone https://github.com/Toldry/gradle_prop_configuration_phase_reproducer.git
+cd gradle_prop_configuration_phase_reproducer/plugin
 gradle publishToMavenLocal
-cd plugin/src/test/resources/proj1
+cd src/test/resources/proj1
 gradle greeting
 ```
 
@@ -53,3 +53,4 @@ it returns the value set in the convention method:
 ### The question, restated:
 Is there a way to get the value defined in the `greeting { }` extension (the value `'hello2'` ) 
 during the configuration phase? (i.e. inside the `apply` method in `GreetingsPlugin`, line 13)
+
